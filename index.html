@@ -14,40 +14,129 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">TriageCare<span class="highlight">AI</span></a>
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="url(#logo-gradient)" />
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#0ea5e9" />
+                            <stop offset="100%" stop-color="#10b981" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                TriageCare<span class="highlight">AI</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
+                <li><a href="specialists.html">Specialists</a></li>
+                <li><a href="find-doctor.html">Find Doctor</a></li>
                 <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#demo" class="btn-primary">Try Demo</a></li>
+                <li><a href="#demo">Try Demo</a></li>
             </ul>
+            <div class="auth-nav" id="auth-nav">
+                <!-- Auth buttons will be injected by auth.js -->
+            </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <span class="badge">Available for 24/7 Triage</span>
-                <h1>Intelligent Patient <br>Intake & <span class="gradient-text">Automation.</span></h1>
-                <p>We are the AI partner for hospitals who want to streamline operations without compromising care.
-                    Symptom intake, scheduling, and engagement—handled.</p>
+                <span class="badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" />
+                    </svg>
+                    24/7 AI-Powered Triage
+                </span>
+                <h1>Intelligent Patient <br>Intake & <span class="gradient-text">Care Navigation.</span></h1>
+                <p>Your AI healthcare companion that provides instant symptom assessment, smart specialist
+                    recommendations, and seamless appointment scheduling all while ensuring patient safety.</p>
                 <div class="hero-btns">
-                    <button id="start-triage-btn" class="btn-primary large">Start Triage Check</button>
-                    <button class="btn-secondary large">View Demo</button>
+                    <a href="#demo" class="btn-primary large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        Start Health Check
+                    </a>
+                    <a href="find-doctor.html" class="btn-secondary large">Find a Doctor</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polyline points="9 12 11 14 15 10" />
+                        </svg>
+                        HIPAA Compliant
+                    </div>
+                    <div class="trust-badge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        Instant Response
+                    </div>
+                    <div class="trust-badge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <polyline points="17 11 19 13 23 9" />
+                        </svg>
+                        Expert Reviewed
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="mockup-card">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="mockup-title">TriageCare AI Assistant</span>
+                    </div>
                     <div class="chat-bubble bot">
-                        <p>Hello! I'm TriageCare AI. Please describe your symptoms.</p>
+                        <div class="bot-avatar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <p>Hello! I'm TriageCare AI. Tell me about your symptoms and I'll help you find the right care.
+                        </p>
                     </div>
                     <div class="chat-bubble user">
-                        <p>I have a severe headache and dizziness since morning.</p>
+                        <p>I've had a severe headache and dizziness since this morning.</p>
                     </div>
                     <div class="chat-bubble bot">
-                        <p>I understand. Based on your symptoms, I recommend seeing a General Physician.</p>
+                        <div class="bot-avatar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div class="bot-response">
+                            <p>Based on your symptoms, I recommend seeing a <strong>General Physician</strong>.</p>
+                            <span class="urgency-badge urgent">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg>
+                                Moderate Priority
+                            </span>
+                        </div>
                     </div>
                     <div class="status-indicator">
-                        <span class="dot"></span> Triage System Active
+                        <span class="dot"></span>
+                        <span>Triage System Active</span>
+                        <span class="status-separator">•</span>
+                        <span class="response-time">Avg. response: &lt;2s</span>
                     </div>
                 </div>
             </div>
@@ -57,30 +146,199 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Selected Work</h2>
-                <p>Recent products shipped to production.</p>
+                <span class="section-badge">Our Capabilities</span>
+                <h2>Healthcare Solutions</h2>
+                <p>AI-powered tools designed for modern patient care.</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="icon-box">🩺</div>
-                    <h3>Conversational Intake</h3>
-                    <p>Patients describe symptoms in natural language. Our NLP engine interprets and categorizes them
-                        instantly.</p>
-                    <a href="#" class="feature-link">View Case Study &rarr;</a>
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                    <h3>Symptom Analysis</h3>
+                    <p>Advanced AI interprets symptoms in natural language, providing accurate triage recommendations
+                        based on medical knowledge.</p>
+                    <div class="feature-stats">
+                        <span><strong>98%</strong> Accuracy</span>
+                        <span><strong>&lt;2s</strong> Response</span>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box">📅</div>
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <path d="M20 8v6M23 11h-6" />
+                        </svg>
+                    </div>
+                    <h3>Specialist Matching</h3>
+                    <p>Intelligent routing to the right specialist based on symptom severity and medical history. No
+                        more guesswork.</p>
+                    <div class="feature-stats">
+                        <span><strong>15+</strong> Specialties</span>
+                        <span><strong>24/7</strong> Available</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+                        </svg>
+                    </div>
                     <h3>Smart Scheduling</h3>
-                    <p>Automated booking, rescheduling, and cancellations directly integrated with hospital calendars.
+                    <p>Seamless appointment booking with automated reminders, rescheduling, and calendar integration.
                     </p>
-                    <a href="#" class="feature-link">View Case Study &rarr;</a>
+                    <div class="feature-stats">
+                        <span><strong>60%</strong> Less No-shows</span>
+                        <span><strong>Auto</strong> Reminders</span>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box">🔔</div>
-                    <h3>Patient Engagement</h3>
-                    <p>Automated reminders and preparation instructions to ensure patients arrive ready and on time.</p>
-                    <a href="#" class="feature-link">View Case Study &rarr;</a>
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <h3>Emergency Detection</h3>
+                    <p>Critical symptom recognition with immediate escalation protocols for life-threatening conditions.
+                    </p>
+                    <div class="feature-stats">
+                        <span><strong>Instant</strong> Alerts</span>
+                        <span><strong>911</strong> Ready</span>
+                    </div>
                 </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>HIPAA-compliant data handling with end-to-end encryption. Your health information stays secure.
+                    </p>
+                    <div class="feature-stats">
+                        <span><strong>HIPAA</strong> Certified</span>
+                        <span><strong>E2E</strong> Encrypted</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3>Care Continuity</h3>
+                    <p>Follow-up recommendations, medication reminders, and wellness tips for ongoing patient
+                        engagement.</p>
+                    <div class="feature-stats">
+                        <span><strong>Post-visit</strong> Care</span>
+                        <span><strong>Med</strong> Reminders</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simple Process</span>
+                <h2>How It Works</h2>
+                <p>Get the care you need in three easy steps.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </div>
+                    <h3>Describe Symptoms</h3>
+                    <p>Tell our AI about your symptoms in plain language. No medical jargon needed—just describe how you
+                        feel.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <path d="M0 12h35M30 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Our intelligent system analyzes your symptoms, assesses urgency, and identifies the right
+                        specialist for your needs.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <path d="M0 12h35M30 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <polyline points="17 11 19 13 23 9" />
+                        </svg>
+                    </div>
+                    <h3>Get Care</h3>
+                    <p>Receive personalized recommendations, book appointments with the right specialist, and get timely
+                        reminders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="specialists.html" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <path d="M20 8v6M23 11h-6" />
+                        </svg>
+                    </div>
+                    <h3>View Specialists</h3>
+                    <p>Explore our directory of medical specialists and their areas of expertise</p>
+                    <span class="quick-link-arrow">→</span>
+                </a>
+                <a href="find-doctor.html" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                    </div>
+                    <h3>Find a Doctor</h3>
+                    <p>Search and book appointments with qualified healthcare providers</p>
+                    <span class="quick-link-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -88,13 +346,52 @@
     <section id="demo" class="demo-section">
         <div class="container">
             <div class="demo-container">
-                <h2>Experience the Future</h2>
-                <p>Try our interactive demo to see how TriageCare AI processes patient requests.</p>
+                <div class="demo-header">
+                    <span class="section-badge">Live Demo</span>
+                    <h2>Experience AI-Powered Triage</h2>
+                    <p>Describe your symptoms naturally and see how TriageCare AI analyzes and provides recommendations.
+                    </p>
+                </div>
                 <div class="demo-interface">
+                    <div class="demo-interface-header">
+                        <div class="demo-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="demo-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                            TriageCare Assistant
+                        </div>
+                        <div class="demo-status">
+                            <span class="status-dot"></span>
+                            Online
+                        </div>
+                    </div>
                     <div id="chat-window" class="chat-window"></div>
                     <div class="input-area">
-                        <input type="text" id="user-input" placeholder="Type your symptoms here...">
-                        <button id="send-btn">Send</button>
+                        <input type="text" id="user-input"
+                            placeholder="Describe your symptoms... (e.g., I have a headache and fever)">
+                        <button id="send-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+                <div class="demo-tips">
+                    <div class="tip">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <span>Try: "I've had chest pain for 2 hours" or "My child has a rash and fever"</span>
                     </div>
                 </div>
             </div>
@@ -103,10 +400,32 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 TriageCare AI. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                    TriageCare<span class="highlight">AI</span>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="dashboard.html">Staff Portal</a></li>
+                </ul>
+                <div class="footer-disclaimer">
+                    <strong>⚠️ Medical Disclaimer:</strong> TriageCare AI is designed to provide general health
+                    information and triage recommendations only. It is not a substitute for professional medical advice,
+                    diagnosis, or treatment. Always seek the advice of your physician or qualified health provider. If
+                    you think you may have a medical emergency, call 911 immediately.
+                </div>
+                <p>&copy; 2025 TriageCare AI. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="auth.js"></script>
     <script src="config.js"></script>
     <script src="medical-knowledge.js"></script>
     <script src="script.js"></script>
