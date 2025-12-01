@@ -514,6 +514,32 @@ body::before {
     transition: all 0.2s;
 }
 
+.input-area button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.typing .text {
+    position: relative;
+    color: var(--text-muted) !important;
+}
+
+.typing .text::after {
+    content: '...';
+    animation: typing 1.5s infinite;
+}
+
+@keyframes typing {
+    0%, 60% { opacity: 1; }
+    30% { opacity: 0.5; }
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
 
 footer p {
     color: var(--text-muted);
