@@ -314,6 +314,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 👨‍💻 Author
 
 **Ishi** - [GitHub](https://github.com/ishicodespace)
+**KumudKode** - [Github](https://github.com/kumudkode)
 
 ---
 
