@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HerHealth - Your Complete Women's Health Companion</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/screens.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#9B6B9E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Splash Screen -->
+        <div class="splash-screen" id="splash-screen">
+            <div class="splash-content">
+                <div class="splash-logo">
+                    <svg class="logo-icon" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="38" fill="url(#splash-gradient)" opacity="0.15" />
+                        <path d="M40 20C40 20 25 30 25 42C25 54 40 60 40 60C40 60 55 54 55 42C55 30 40 20 40 20Z"
+                            fill="url(#splash-gradient)" />
+                        <circle cx="40" cy="38" r="6" fill="white" />
+                        <defs>
+                            <linearGradient id="splash-gradient" x1="20" y1="20" x2="60" y2="60">
+                                <stop offset="0%" stop-color="#B8A9C9" />
+                                <stop offset="100%" stop-color="#E8B4B8" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1 class="splash-title">HerHealth</h1>
+                <p class="splash-tagline">Your complete women's health companion</p>
+                <div class="splash-loader">
+                    <div class="loader-dot"></div>
+                    <div class="loader-dot"></div>
+                    <div class="loader-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App Shell -->
+        <div class="app-shell" id="app-shell">
+            <!-- Status Bar Spacer -->
+            <div class="status-bar-spacer"></div>
+
+            <!-- Screen Container -->
+            <main class="screen-container" id="screen-container">
+                <!-- Screens will be loaded here -->
+            </main>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav" id="bottom-nav">
+                <button class="nav-item active" data-screen="home">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <span class="nav-label">Home</span>
+                    <div class="nav-indicator"></div>
+                </button>
+                <button class="nav-item" data-screen="insights">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                        </svg>
+                    </div>
+                    <span class="nav-label">Insights</span>
+                    <div class="nav-indicator"></div>
+                </button>
+                <!-- AI Assistant Center Button -->
+                <button class="nav-item nav-ai-btn" data-screen="ai-assistant">
+                    <div class="ai-btn-container">
+                        <div class="ai-btn-glow"></div>
+                        <div class="ai-btn-inner">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+                                <circle cx="7.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <circle cx="16.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <path d="M9 18h6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <span class="nav-label">Sakhi AI</span>
+                </button>
+                <button class="nav-item" data-screen="community">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <span class="nav-label">Community</span>
+                    <div class="nav-indicator"></div>
+                </button>
+                <button class="nav-item" data-screen="profile">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <span class="nav-label">Profile</span>
+                    <div class="nav-indicator"></div>
+                </button>
+            </nav>
+        </div>
+
+        <!-- AI Assistant Chat Screen Template -->
+        <template id="ai-assistant-screen-template">
+            <div class="screen ai-assistant-screen">
+                <header class="ai-chat-header">
+                    <div class="ai-header-info">
+                        <div class="ai-avatar">
+                            <div class="ai-avatar-ring"></div>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+                                <circle cx="7.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <circle cx="16.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <path d="M9 18h6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="ai-header-text">
+                            <h1 class="ai-name">Sakhi AI</h1>
+                            <span class="ai-status"><span class="status-dot"></span> Your Health Companion</span>
+                        </div>
+                    </div>
+                    <button class="ai-menu-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="12" cy="5" r="1" />
+                            <circle cx="12" cy="19" r="1" />
+                        </svg>
+                    </button>
+                </header>
+
+                <!-- Quick Topics -->
+                <div class="ai-quick-topics">
+                    <button class="quick-topic-btn" data-topic="cycle">🩸 My Cycle</button>
+                    <button class="quick-topic-btn" data-topic="symptoms">🤕 Symptoms</button>
+                    <button class="quick-topic-btn" data-topic="nutrition">🥗 Nutrition</button>
+                    <button class="quick-topic-btn" data-topic="ayurveda">🌿 Ayurveda</button>
+                    <button class="quick-topic-btn" data-topic="mental">🧘 Mental Health</button>
+                </div>
+
+                <!-- AI Chat Messages -->
+                <div class="ai-chat-messages" id="ai-chat-messages">
+                    <!-- Welcome Message -->
+                    <div class="ai-message assistant">
+                        <div class="ai-message-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+                                <circle cx="7.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <circle cx="16.5" cy="14.5" r="1.5" fill="currentColor" />
+                                <path d="M9 18h6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="ai-message-content">
+                            <div class="ai-message-bubble">
+                                <p>Namaste! 🙏 I'm <strong>Sakhi</strong>, your personal health companion.</p>
+                                <p>I'm here to help you with:</p>
+                                <ul>
+                                    <li>📅 Understanding your menstrual cycle</li>
+                                    <li>🌿 Ayurvedic remedies & wellness tips</li>
+                                    <li>🍽️ Indian diet & nutrition advice</li>
+                                    <li>💆‍♀️ Managing symptoms naturally</li>
+                                    <li>🧘 Mental wellness support</li>
+                                </ul>
+                                <p>How can I help you today?</p>
+                            </div>
+                            <span class="ai-message-time">Just now</span>
+                        </div>
+                    </div>
+
+                    <!-- Suggested Questions -->
+                    <div class="ai-suggestions">
+                        <p class="suggestions-label">Try asking:</p>
+                        <div class="suggestion-chips">
+                            <button class="suggestion-chip" data-question="Why is my period late this month?">
+                                Why is my period late?
+                            </button>
+                            <button class="suggestion-chip" data-question="What foods should I eat during my period?">
+                                Foods for period?
+                            </button>
+                            <button class="suggestion-chip" data-question="How can I reduce period cramps naturally?">
+                                Natural cramp relief?
+                            </button>
+                            <button class="suggestion-chip" data-question="What Ayurvedic remedies help with PCOS?">
+                                Ayurveda for PCOS?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chat Input -->
+                <div class="ai-chat-input-container">
+                    <div class="ai-input-wrapper">
+                        <button class="ai-voice-btn" id="ai-voice-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" y1="19" x2="12" y2="23" />
+                                <line x1="8" y1="23" x2="16" y2="23" />
+                            </svg>
+                        </button>
+                        <input type="text" class="ai-chat-input" placeholder="Ask me anything about your health..."
+                            id="ai-chat-input">
+                    </div>
+                    <button class="ai-send-btn" id="ai-send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- AI Disclaimer -->
+                <div class="ai-disclaimer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <span>For informational purposes only. Always consult a doctor for medical advice.</span>
+                </div>
+            </div>
+        </template>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="fab-log" aria-label="Quick Log">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+        </button>
+
+        <!-- Quick Log Modal -->
+        <div class="modal-overlay" id="quick-log-modal">
+            <div class="modal-content quick-log-sheet">
+                <div class="modal-handle"></div>
+                <h3 class="modal-title">Quick Log</h3>
+                <div class="quick-log-grid">
+                    <button class="quick-log-item" data-log="period">
+                        <div class="log-icon period">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8" />
+                            </svg>
+                        </div>
+                        <span>Period</span>
+                    </button>
+                    <button class="quick-log-item" data-log="mood">
+                        <div class="log-icon mood">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                <line x1="9" y1="9" x2="9.01" y2="9" />
+                                <line x1="15" y1="9" x2="15.01" y2="9" />
+                            </svg>
+                        </div>
+                        <span>Mood</span>
+                    </button>
+                    <button class="quick-log-item" data-log="symptoms">
+                        <div class="log-icon symptoms">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span>Symptoms</span>
+                    </button>
+                    <button class="quick-log-item" data-log="sleep">
+                        <div class="log-icon sleep">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                        </div>
+                        <span>Sleep</span>
+                    </button>
+                    <button class="quick-log-item" data-log="water">
+                        <div class="log-icon water">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg>
+                        </div>
+                        <span>Water</span>
+                    </button>
+                    <button class="quick-log-item" data-log="medication">
+                        <div class="log-icon medication">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M12 8v8" />
+                                <path d="M8 12h8" />
+                            </svg>
+                        </div>
+                        <span>Medicine</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Onboarding Screens -->
+    <template id="onboarding-welcome-template">
+        <div class="screen onboarding-screen welcome-screen">
+            <div class="onboarding-content">
+                <div class="welcome-illustration">
+                    <svg viewBox="0 0 200 200" class="flower-illustration">
+                        <defs>
+                            <linearGradient id="petal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#E8B4B8" />
+                                <stop offset="100%" stop-color="#B8A9C9" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="20" fill="#F5E6D3" />
+                        <ellipse cx="100" cy="50" rx="15" ry="30" fill="url(#petal-gradient)" opacity="0.9" />
+                        <ellipse cx="150" cy="100" rx="30" ry="15" fill="url(#petal-gradient)" opacity="0.8" />
+                        <ellipse cx="100" cy="150" rx="15" ry="30" fill="url(#petal-gradient)" opacity="0.9" />
+                        <ellipse cx="50" cy="100" rx="30" ry="15" fill="url(#petal-gradient)" opacity="0.8" />
+                        <ellipse cx="135" cy="65" rx="12" ry="25" fill="url(#petal-gradient)" opacity="0.7"
+                            transform="rotate(45 135 65)" />
+                        <ellipse cx="135" cy="135" rx="12" ry="25" fill="url(#petal-gradient)" opacity="0.7"
+                            transform="rotate(-45 135 135)" />
+                        <ellipse cx="65" cy="135" rx="12" ry="25" fill="url(#petal-gradient)" opacity="0.7"
+                            transform="rotate(45 65 135)" />
+                        <ellipse cx="65" cy="65" rx="12" ry="25" fill="url(#petal-gradient)" opacity="0.7"
+                            transform="rotate(-45 65 65)" />
+                    </svg>
+                </div>
+                <h1 class="onboarding-title">Welcome to HerHealth</h1>
+                <p class="onboarding-subtitle">Your personalized women's health companion with Ayurvedic wisdom and
+                    modern tracking</p>
+                <div class="onboarding-features">
+                    <div class="feature-pill">🌸 Cycle Tracking</div>
+                    <div class="feature-pill">🌿 Ayurveda Tips</div>
+                    <div class="feature-pill">🥗 Indian Diet Plans</div>
+                    <div class="feature-pill">👩‍⚕️ Doctor Connect</div>
+                </div>
+            </div>
+            <div class="onboarding-actions">
+                <button class="btn btn-primary btn-lg onboarding-next" data-next="onboarding-cycle">Get Started</button>
+                <button class="btn btn-text skip-btn">Already have an account? Sign In</button>
+            </div>
+            <div class="onboarding-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </template>
+
+    <template id="onboarding-cycle-template">
+        <div class="screen onboarding-screen cycle-setup-screen">
+            <header class="onboarding-header">
+                <button class="back-btn" data-back="onboarding-welcome">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <span class="step-indicator">Step 1 of 3</span>
+                <button class="skip-link" data-skip="onboarding-goals">Skip</button>
+            </header>
+            <div class="onboarding-content">
+                <h2 class="onboarding-title">Let's learn about your cycle</h2>
+                <p class="onboarding-subtitle">This helps us give you accurate predictions</p>
+
+                <div class="form-group">
+                    <label class="form-label">When did your last period start?</label>
+                    <input type="date" class="form-input date-input" id="last-period-date">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">How long is your typical cycle?</label>
+                    <div class="cycle-length-selector">
+                        <button class="cycle-option" data-days="25">25 days</button>
+                        <button class="cycle-option active" data-days="28">28 days</button>
+                        <button class="cycle-option" data-days="30">30 days</button>
+                        <button class="cycle-option" data-days="32">32 days</button>
+                        <button class="cycle-option" data-days="irregular">Irregular</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">How long does your period usually last?</label>
+                    <div class="period-length-slider">
+                        <input type="range" min="3" max="7" value="5" class="slider" id="period-length">
+                        <div class="slider-labels">
+                            <span>3 days</span>
+                            <span class="current-value">5 days</span>
+                            <span>7 days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="onboarding-actions">
+                <button class="btn btn-primary btn-lg onboarding-next" data-next="onboarding-goals">Continue</button>
+            </div>
+            <div class="onboarding-dots">
+                <span class="dot"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </template>
+
+    <template id="onboarding-goals-template">
+        <div class="screen onboarding-screen goals-setup-screen">
+            <header class="onboarding-header">
+                <button class="back-btn" data-back="onboarding-cycle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <span class="step-indicator">Step 2 of 3</span>
+                <button class="skip-link" data-skip="onboarding-diet">Skip</button>
+            </header>
+            <div class="onboarding-content">
+                <h2 class="onboarding-title">What are your health goals?</h2>
+                <p class="onboarding-subtitle">Select all that apply</p>
+
+                <div class="goals-grid">
+                    <button class="goal-card" data-goal="track-cycle">
+                        <div class="goal-icon">🌸</div>
+                        <span class="goal-label">Track my cycle</span>
+                    </button>
+                    <button class="goal-card" data-goal="get-pregnant">
+                        <div class="goal-icon">👶</div>
+                        <span class="goal-label">Get pregnant</span>
+                    </button>
+                    <button class="goal-card" data-goal="avoid-pregnancy">
+                        <div class="goal-icon">🛡️</div>
+                        <span class="goal-label">Avoid pregnancy</span>
+                    </button>
+                    <button class="goal-card" data-goal="manage-pcos">
+                        <div class="goal-icon">💪</div>
+                        <span class="goal-label">Manage PCOS</span>
+                    </button>
+                    <button class="goal-card" data-goal="hormone-balance">
+                        <div class="goal-icon">⚖️</div>
+                        <span class="goal-label">Hormone balance</span>
+                    </button>
+                    <button class="goal-card" data-goal="symptom-tracking">
+                        <div class="goal-icon">📊</div>
+                        <span class="goal-label">Track symptoms</span>
+                    </button>
+                    <button class="goal-card" data-goal="weight-loss">
+                        <div class="goal-icon">🏃‍♀️</div>
+                        <span class="goal-label">Weight management</span>
+                    </button>
+                    <button class="goal-card" data-goal="mental-health">
+                        <div class="goal-icon">🧘</div>
+                        <span class="goal-label">Mental wellness</span>
+                    </button>
+                </div>
+
+                <div class="health-conditions">
+                    <label class="form-label">Any health conditions?</label>
+                    <div class="condition-chips">
+                        <button class="condition-chip" data-condition="pcos">PCOS</button>
+                        <button class="condition-chip" data-condition="thyroid">Thyroid</button>
+                        <button class="condition-chip" data-condition="endometriosis">Endometriosis</button>
+                        <button class="condition-chip" data-condition="diabetes">Diabetes</button>
+                        <button class="condition-chip" data-condition="none">None</button>
+                    </div>
+                </div>
+            </div>
+            <div class="onboarding-actions">
+                <button class="btn btn-primary btn-lg onboarding-next" data-next="onboarding-diet">Continue</button>
+            </div>
+            <div class="onboarding-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </template>
+
+    <template id="onboarding-diet-template">
+        <div class="screen onboarding-screen diet-setup-screen">
+            <header class="onboarding-header">
+                <button class="back-btn" data-back="onboarding-goals">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <span class="step-indicator">Step 3 of 3</span>
+                <button class="skip-link" data-skip="home">Skip</button>
+            </header>
+            <div class="onboarding-content">
+                <h2 class="onboarding-title">Your dietary preferences</h2>
+                <p class="onboarding-subtitle">For personalized meal suggestions</p>
+
+                <div class="diet-type-selector">
+                    <button class="diet-type-card" data-diet="veg">
+                        <div class="diet-icon">🥬</div>
+                        <span class="diet-label">Vegetarian</span>
+                        <span class="diet-badge green"></span>
+                    </button>
+                    <button class="diet-type-card" data-diet="nonveg">
+                        <div class="diet-icon">🍗</div>
+                        <span class="diet-label">Non-Vegetarian</span>
+                        <span class="diet-badge red"></span>
+                    </button>
+                    <button class="diet-type-card" data-diet="eggetarian">
+                        <div class="diet-icon">🥚</div>
+                        <span class="diet-label">Eggetarian</span>
+                        <span class="diet-badge yellow"></span>
+                    </button>
+                    <button class="diet-type-card" data-diet="jain">
+                        <div class="diet-icon">🌿</div>
+                        <span class="diet-label">Jain</span>
+                        <span class="diet-badge white"></span>
+                    </button>
+                    <button class="diet-type-card" data-diet="vegan">
+                        <div class="diet-icon">🌱</div>
+                        <span class="diet-label">Vegan</span>
+                        <span class="diet-badge green"></span>
+                    </button>
+                </div>
+
+                <div class="cuisine-preference">
+                    <label class="form-label">Preferred regional cuisine</label>
+                    <div class="cuisine-chips">
+                        <button class="cuisine-chip" data-cuisine="north">North Indian</button>
+                        <button class="cuisine-chip" data-cuisine="south">South Indian</button>
+                        <button class="cuisine-chip" data-cuisine="gujarati">Gujarati</button>
+                        <button class="cuisine-chip" data-cuisine="bengali">Bengali</button>
+                        <button class="cuisine-chip" data-cuisine="maharashtrian">Maharashtrian</button>
+                        <button class="cuisine-chip" data-cuisine="all">All cuisines</button>
+                    </div>
+                </div>
+
+                <div class="ayurveda-interest">
+                    <div class="toggle-row">
+                        <div class="toggle-info">
+                            <span class="toggle-label">Include Ayurvedic suggestions</span>
+                            <span class="toggle-desc">Get dosha-based diet and lifestyle tips</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="onboarding-actions">
+                <button class="btn btn-primary btn-lg onboarding-complete" data-next="home">Start Tracking</button>
+            </div>
+            <div class="onboarding-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot active"></span>
+            </div>
+        </div>
+    </template>
+
+    <!-- Screen Templates -->
+    <template id="home-screen-template">
+        <div class="screen home-screen">
+            <!-- Home Header -->
+            <header class="screen-header home-header">
+                <div class="header-top">
+                    <div class="greeting">
+                        <h1 class="greeting-text">Good Morning, <span class="user-name">Priya</span></h1>
+                        <p class="date-text" id="current-date">Thursday, Dec 11</p>
+                    </div>
+                    <button class="header-icon-btn notification-btn" aria-label="Notifications">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Cycle Status Card -->
+            <section class="cycle-status-card">
+                <div class="cycle-ring-container">
+                    <svg class="cycle-ring" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="cycle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#E8B4B8" />
+                                <stop offset="50%" stop-color="#B8A9C9" />
+                                <stop offset="100%" stop-color="#A8D5D8" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="cycle-ring-bg" cx="100" cy="100" r="85" fill="none" stroke="#F5F0F6"
+                            stroke-width="12" />
+                        <circle class="cycle-ring-progress" cx="100" cy="100" r="85" fill="none"
+                            stroke="url(#cycle-gradient)" stroke-width="12" stroke-linecap="round"
+                            stroke-dasharray="534" stroke-dashoffset="200" />
+                    </svg>
+                    <div class="cycle-info">
+                        <span class="cycle-day">Day 20</span>
+                        <span class="cycle-phase">Luteal</span>
+                    </div>
+                </div>
+                <div class="cycle-details">
+                    <div class="cycle-detail-item">
+                        <span class="detail-label">Period in</span>
+                        <span class="detail-value">8 days</span>
+                    </div>
+                    <div class="cycle-detail-item">
+                        <span class="detail-label">Fertile window</span>
+                        <span class="detail-value highlight">Today - Dec 15</span>
+                    </div>
+                    <div class="cycle-detail-item">
+                        <span class="detail-label">Cycle length</span>
+                        <span class="detail-value">28 days</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-sm cycle-log-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="8" />
+                    </svg>
+                    Log Period
+                </button>
+            </section>
+
+            <!-- Today's Summary -->
+            <section class="today-summary">
+                <h2 class="section-title">Today's Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card mood-card">
+                        <div class="summary-icon">😊</div>
+                        <div class="summary-content">
+                            <span class="summary-label">Mood</span>
+                            <span class="summary-value">Happy</span>
+                        </div>
+                    </div>
+                    <div class="summary-card sleep-card">
+                        <div class="summary-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                        </div>
+                        <div class="summary-content">
+                            <span class="summary-label">Sleep</span>
+                            <span class="summary-value">7h 30m</span>
+                        </div>
+                    </div>
+                    <div class="summary-card water-card">
+                        <div class="summary-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg>
+                        </div>
+                        <div class="summary-content">
+                            <span class="summary-label">Water</span>
+                            <span class="summary-value">5/8 glasses</span>
+                        </div>
+                    </div>
+                    <div class="summary-card energy-card">
+                        <div class="summary-icon">⚡</div>
+                        <div class="summary-content">
+                            <span class="summary-label">Energy</span>
+                            <span class="summary-value">High</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What to Expect Section -->
+            <section class="what-to-expect">
+                <div class="section-header">
+                    <h2 class="section-title">What to Expect</h2>
+                    <span class="phase-badge luteal">Luteal Phase</span>
+                </div>
+                <p class="expect-description">During this phase, your body is preparing for your upcoming period. Here's
+                    what you might experience:</p>
+
+                <div class="symptoms-grid">
+                    <div class="symptom-item likely">
+                        <div class="symptom-icon">😔</div>
+                        <span class="symptom-name">Mood Changes</span>
+                        <span class="symptom-likelihood">Very Likely</span>
+                    </div>
+                    <div class="symptom-item likely">
+                        <div class="symptom-icon">🫄</div>
+                        <span class="symptom-name">Bloating</span>
+                        <span class="symptom-likelihood">Very Likely</span>
+                    </div>
+                    <div class="symptom-item moderate">
+                        <div class="symptom-icon">🍫</div>
+                        <span class="symptom-name">Food Cravings</span>
+                        <span class="symptom-likelihood">Likely</span>
+                    </div>
+                    <div class="symptom-item moderate">
+                        <div class="symptom-icon">😴</div>
+                        <span class="symptom-name">Fatigue</span>
+                        <span class="symptom-likelihood">Likely</span>
+                    </div>
+                    <div class="symptom-item moderate">
+                        <div class="symptom-icon">🤕</div>
+                        <span class="symptom-name">Breast Tenderness</span>
+                        <span class="symptom-likelihood">Likely</span>
+                    </div>
+                    <div class="symptom-item mild">
+                        <div class="symptom-icon">😣</div>
+                        <span class="symptom-name">Mild Cramps</span>
+                        <span class="symptom-likelihood">Possible</span>
+                    </div>
+                </div>
+
+                <div class="expect-tips">
+                    <h4 class="tips-title">💡 Tips for this phase</h4>
+                    <ul class="tips-list">
+                        <li>Stay hydrated to reduce bloating</li>
+                        <li>Include magnesium-rich foods (dark chocolate, bananas)</li>
+                        <li>Practice light yoga or walking</li>
+                        <li>Get 7-8 hours of sleep</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2 class="section-title">Quick Actions</h2>
+                <div class="actions-scroll">
+                    <button class="action-card" data-action="calendar">
+                        <div class="action-icon calendar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="action-label">Calendar</span>
+                    </button>
+                    <button class="action-card" data-action="doctor">
+                        <div class="action-icon doctor-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span class="action-label">Find Doctor</span>
+                    </button>
+                    <button class="action-card" data-action="diet">
+                        <div class="action-icon diet-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                                <line x1="6" y1="1" x2="6" y2="4" />
+                                <line x1="10" y1="1" x2="10" y2="4" />
+                                <line x1="14" y1="1" x2="14" y2="4" />
+                            </svg>
+                        </div>
+                        <span class="action-label">Diet Plan</span>
+                    </button>
+                    <button class="action-card" data-action="ayurveda">
+                        <div class="action-icon ayurveda-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <span class="action-label">Ayurveda</span>
+                    </button>
+                    <button class="action-card" data-action="remedies">
+                        <div class="action-icon remedies-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </div>
+                        <span class="action-label">Remedies</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Health Insights Preview -->
+            <section class="health-insights-preview">
+                <div class="section-header">
+                    <h2 class="section-title">Health Insights</h2>
+                    <button class="see-all-btn">See All</button>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg>
+                    </div>
+                    <div class="insight-content">
+                        <h4 class="insight-title">Ovulation Day</h4>
+                        <p class="insight-text">Today is your predicted ovulation day. You may experience mild cramping
+                            and increased energy.</p>
+                    </div>
+                </div>
+                <div class="insight-card ayurveda-insight">
+                    <div class="insight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div class="insight-content">
+                        <h4 class="insight-title">Ayurveda Tip</h4>
+                        <p class="insight-text">Try drinking warm water with tulsi and ginger to balance your Pitta
+                            during ovulation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Reminders -->
+            <section class="reminders-section">
+                <div class="section-header">
+                    <h2 class="section-title">Reminders</h2>
+                    <button class="add-btn">+ Add</button>
+                </div>
+                <div class="reminder-list">
+                    <div class="reminder-item">
+                        <div class="reminder-icon pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M12 8v8" />
+                                <path d="M8 12h8" />
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <span class="reminder-title">Birth Control Pill</span>
+                            <span class="reminder-time">9:00 PM</span>
+                        </div>
+                        <div class="reminder-status pending"></div>
+                    </div>
+                    <div class="reminder-item">
+                        <div class="reminder-icon appointment">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <span class="reminder-title">Dr. Ag Appointment</span>
+                            <span class="reminder-time">Tomorrow, 10:00 AM</span>
+                        </div>
+                        <div class="reminder-status scheduled"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Spacer for Nav -->
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <template id="insights-screen-template">
+        <div class="screen insights-screen">
+            <header class="screen-header">
+                <h1 class="screen-title">Insights</h1>
+                <div class="header-actions">
+                    <button class="header-icon-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Time Period Selector -->
+            <div class="period-selector">
+                <button class="period-btn active">Week</button>
+                <button class="period-btn">Month</button>
+                <button class="period-btn">3 Months</button>
+                <button class="period-btn">Year</button>
+            </div>
+
+            <!-- Cycle Overview -->
+            <section class="cycle-overview-card">
+                <h3 class="card-title">Cycle Overview</h3>
+                <div class="cycle-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">28</span>
+                        <span class="stat-label">Avg. Cycle</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Avg. Period</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">92%</span>
+                        <span class="stat-label">Prediction</span>
+                    </div>
+                </div>
+                <div class="cycle-chart-container">
+                    <canvas id="cycle-chart"></canvas>
+                </div>
+            </section>
+
+            <!-- Symptom Trends -->
+            <section class="symptom-trends">
+                <h3 class="card-title">Symptom Patterns</h3>
+                <div class="symptom-chart-container">
+                    <div class="symptom-bar">
+                        <span class="symptom-name">Cramps</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="symptom-percent">75%</span>
+                    </div>
+                    <div class="symptom-bar">
+                        <span class="symptom-name">Bloating</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="symptom-percent">60%</span>
+                    </div>
+                    <div class="symptom-bar">
+                        <span class="symptom-name">Mood Swings</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="symptom-percent">45%</span>
+                    </div>
+                    <div class="symptom-bar">
+                        <span class="symptom-name">Fatigue</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 55%"></div>
+                        </div>
+                        <span class="symptom-percent">55%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mood & Energy Correlation -->
+            <section class="correlation-card">
+                <h3 class="card-title">Mood & Energy Trends</h3>
+                <div class="correlation-chart">
+                    <div class="mini-chart">
+                        <div class="chart-line mood-line"></div>
+                        <div class="chart-line energy-line"></div>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item mood">Mood</span>
+                        <span class="legend-item energy">Energy</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Score -->
+            <section class="health-score-card">
+                <div class="score-ring">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#F5F0F6" stroke-width="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#score-gradient)" stroke-width="8"
+                            stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="50"
+                            transform="rotate(-90 50 50)" />
+                        <defs>
+                            <linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#A8D5D8" />
+                                <stop offset="100%" stop-color="#B8A9C9" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="score-value">
+                        <span class="score-number">82</span>
+                        <span class="score-label">Health Score</span>
+                    </div>
+                </div>
+                <div class="score-breakdown">
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Sleep Quality</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Cycle Regularity</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Symptom Management</span>
+                        <div class="breakdown-bar">
+                            <div class="breakdown-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Summary -->
+            <section class="ai-summary-card">
+                <div class="ai-header">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h3 class="ai-title">AI Health Summary</h3>
+                </div>
+                <p class="ai-text">Based on your data, your cycle has been regular with an average length of 28 days.
+                    Your mood tends to dip 2-3 days before your period. Consider increasing iron-rich foods during your
+                    period week.</p>
+                <button class="btn btn-outline btn-sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Export Report
+                </button>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <template id="community-screen-template">
+        <div class="screen community-screen">
+            <header class="screen-header">
+                <h1 class="screen-title">Community</h1>
+                <div class="header-actions">
+                    <button class="header-icon-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Anonymous Toggle -->
+            <div class="anonymous-toggle">
+                <div class="toggle-info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>Anonymous Mode</span>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <!-- Topic Rooms -->
+            <section class="topic-rooms">
+                <h3 class="section-title">Support Rooms</h3>
+                <div class="rooms-grid">
+                    <button class="room-card pcos">
+                        <div class="room-icon">🎀</div>
+                        <span class="room-name">PCOS Support</span>
+                        <span class="room-members">2.4k members</span>
+                        <span class="room-active">• 124 active</span>
+                    </button>
+                    <button class="room-card pregnancy">
+                        <div class="room-icon">🤰</div>
+                        <span class="room-name">Pregnancy</span>
+                        <span class="room-members">5.1k members</span>
+                        <span class="room-active">• 89 active</span>
+                    </button>
+                    <button class="room-card hormones">
+                        <div class="room-icon">⚖️</div>
+                        <span class="room-name">Hormone Balance</span>
+                        <span class="room-members">1.8k members</span>
+                        <span class="room-active">• 67 active</span>
+                    </button>
+                    <button class="room-card general">
+                        <div class="room-icon">💜</div>
+                        <span class="room-name">General Health</span>
+                        <span class="room-members">8.2k members</span>
+                        <span class="room-active">• 201 active</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Peer Matching -->
+            <section class="peer-matching">
+                <div class="section-header">
+                    <h3 class="section-title">Peers Like You</h3>
+                    <button class="refresh-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10" />
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="peers-list">
+                    <div class="peer-card">
+                        <div class="peer-avatar">A</div>
+                        <div class="peer-info">
+                            <span class="peer-name">Anonymous User</span>
+                            <span class="peer-match">Similar: PCOS, Cycle irregularity</span>
+                        </div>
+                        <button class="btn btn-sm btn-outline">Connect</button>
+                    </div>
+                    <div class="peer-card">
+                        <div class="peer-avatar">S</div>
+                        <div class="peer-info">
+                            <span class="peer-name">SunshineGirl</span>
+                            <span class="peer-match">Similar: Thyroid, Mood tracking</span>
+                        </div>
+                        <button class="btn btn-sm btn-outline">Connect</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Discussions -->
+            <section class="discussions">
+                <h3 class="section-title">Trending Discussions</h3>
+                <div class="discussion-list">
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <span class="discussion-tag pcos">PCOS</span>
+                            <span class="discussion-time">2h ago</span>
+                        </div>
+                        <h4 class="discussion-title">Best Indian foods for managing PCOS symptoms?</h4>
+                        <p class="discussion-preview">Has anyone tried the ragi and methi combination? My nutritionist
+                            suggested...</p>
+                        <div class="discussion-stats">
+                            <span class="stat">💬 45 replies</span>
+                            <span class="stat">❤️ 128 likes</span>
+                        </div>
+                    </div>
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <span class="discussion-tag general">General</span>
+                            <span class="discussion-time">5h ago</span>
+                        </div>
+                        <h4 class="discussion-title">Home remedies for period cramps that actually work</h4>
+                        <p class="discussion-preview">I've been using a hot water bottle with ajwain seeds and it's
+                            been...</p>
+                        <div class="discussion-stats">
+                            <span class="stat">💬 89 replies</span>
+                            <span class="stat">❤️ 256 likes</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expert Q&A -->
+            <section class="expert-qa">
+                <div class="section-header">
+                    <h3 class="section-title">Expert Q&A</h3>
+                    <span class="verified-badge">Verified Doctors</span>
+                </div>
+                <div class="qa-card">
+                    <div class="expert-info">
+                        <img src="https://ui-avatars.com/api/?name=Dr+Meera&background=B8A9C9&color=fff" alt="Dr. Meera"
+                            class="expert-avatar">
+                        <div class="expert-details">
+                            <span class="expert-name">Dr. Meera Ag</span>
+                            <span class="expert-title">Gynecologist • 15 yrs exp</span>
+                        </div>
+                    </div>
+                    <div class="qa-content">
+                        <p class="question">"Is it normal to have irregular periods while on thyroid medication?"</p>
+                        <p class="answer">Yes, thyroid fluctuations can affect your menstrual cycle. It's important to
+                            monitor both...</p>
+                    </div>
+                    <button class="btn btn-text">Read full answer →</button>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Chat Room Screen -->
+    <template id="chatroom-screen-template">
+        <div class="screen chatroom-screen">
+            <header class="chat-header">
+                <button class="back-btn" data-back="community">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="chat-room-info">
+                    <h1 class="chat-room-name">PCOS Support</h1>
+                    <span class="chat-room-members">2.4k members • 124 online</span>
+                </div>
+                <button class="chat-menu-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Pinned Message -->
+            <div class="pinned-message">
+                <div class="pin-icon">📌</div>
+                <div class="pin-content">
+                    <span class="pin-label">Pinned by Admin</span>
+                    <p class="pin-text">Welcome! Please be respectful and supportive. No medical advice - consult your
+                        doctor for personal health concerns.</p>
+                </div>
+                <button class="pin-close">×</button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-date-divider">
+                    <span>Today</span>
+                </div>
+
+                <div class="chat-message other">
+                    <div class="message-avatar">P</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-sender">PriyaHealthy</span>
+                            <span class="message-time">10:32 AM</span>
+                        </div>
+                        <div class="message-bubble">
+                            <p>Has anyone tried metformin for PCOS? My doctor just prescribed it and I'm a bit nervous
+                                about side effects 😅</p>
+                        </div>
+                        <div class="message-reactions">
+                            <button class="reaction-btn">❤️ 5</button>
+                            <button class="reaction-btn">🤗 3</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message other">
+                    <div class="message-avatar">A</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-sender">Anonymous</span>
+                            <span class="message-time">10:35 AM</span>
+                        </div>
+                        <div class="message-bubble">
+                            <p>I've been on it for 3 months now! The first week was tough (stomach issues) but it got
+                                better. Make sure to take it with food 🍽️</p>
+                        </div>
+                        <div class="message-reactions">
+                            <button class="reaction-btn">👍 8</button>
+                            <button class="reaction-btn">💯 2</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message other">
+                    <div class="message-avatar">R</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-sender">RadhaWellness</span>
+                            <span class="verified-user">✓</span>
+                            <span class="message-time">10:38 AM</span>
+                        </div>
+                        <div class="message-bubble">
+                            <p>Adding inositol supplements along with metformin helped me a lot! Also cutting down on
+                                refined carbs made a huge difference in my symptoms.</p>
+                        </div>
+                        <div class="message-reactions">
+                            <button class="reaction-btn">❤️ 12</button>
+                            <button class="reaction-btn">📝 4</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message self">
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-sender">You</span>
+                            <span class="message-time">10:42 AM</span>
+                        </div>
+                        <div class="message-bubble">
+                            <p>Thank you all! This is so helpful 💜 Any specific Indian diet tips for PCOS?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message other">
+                    <div class="message-avatar">S</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-sender">SnehaFit</span>
+                            <span class="message-time">10:45 AM</span>
+                        </div>
+                        <div class="message-bubble">
+                            <p>Yes! Try including:</p>
+                            <ul class="message-list">
+                                <li>🌾 Ragi and jowar instead of wheat</li>
+                                <li>🥬 Methi leaves (fenugreek) daily</li>
+                                <li>🫚 Jeera water in the morning</li>
+                                <li>🥗 Lots of green veggies</li>
+                            </ul>
+                            <p>Avoid white rice and maida completely if you can!</p>
+                        </div>
+                        <div class="message-reactions">
+                            <button class="reaction-btn">❤️ 24</button>
+                            <button class="reaction-btn">🙏 15</button>
+                            <button class="reaction-btn">📌 7</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message other typing">
+                    <div class="message-avatar">M</div>
+                    <div class="message-content">
+                        <div class="typing-indicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <button class="chat-attach-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </button>
+                    <input type="text" class="chat-input" placeholder="Type a message..." id="chat-input">
+                    <button class="chat-emoji-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="chat-send-btn" id="chat-send-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Emoji Picker (hidden by default) -->
+            <div class="emoji-picker" id="emoji-picker" style="display: none;">
+                <div class="emoji-grid">
+                    <button class="emoji-btn">😊</button>
+                    <button class="emoji-btn">❤️</button>
+                    <button class="emoji-btn">👍</button>
+                    <button class="emoji-btn">🙏</button>
+                    <button class="emoji-btn">💪</button>
+                    <button class="emoji-btn">🤗</button>
+                    <button class="emoji-btn">💜</button>
+                    <button class="emoji-btn">✨</button>
+                    <button class="emoji-btn">🌸</button>
+                    <button class="emoji-btn">🎀</button>
+                    <button class="emoji-btn">💯</button>
+                    <button class="emoji-btn">🥰</button>
+                    <button class="emoji-btn">😅</button>
+                    <button class="emoji-btn">🤔</button>
+                    <button class="emoji-btn">👏</button>
+                    <button class="emoji-btn">💕</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="profile-screen-template">
+        <div class="screen profile-screen">
+            <header class="screen-header">
+                <h1 class="screen-title">Profile</h1>
+                <button class="header-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Profile Card -->
+            <section class="profile-card">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar">
+                        <img src="https://ui-avatars.com/api/?name=Priya+S&background=B8A9C9&color=fff&size=100"
+                            alt="Profile">
+                    </div>
+                    <button class="edit-avatar-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </button>
+                </div>
+                <h2 class="profile-name">Priya Ag</h2>
+                <p class="profile-email">Priya.Ag@email.com</p>
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <span class="stat-value">14</span>
+                        <span class="stat-label">Cycles Tracked</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-value">156</span>
+                        <span class="stat-label">Days Active</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-value">92%</span>
+                        <span class="stat-label">Log Streak</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Profile -->
+            <section class="menu-section">
+                <h3 class="menu-title">Health Profile</h3>
+                <div class="menu-list">
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Personal Information</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Health Conditions</span>
+                        <span class="menu-badge">Hairfall</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M12 8v8" />
+                                <path d="M8 12h8" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Medications</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Health Reports</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Doctor Connectivity -->
+            <section class="menu-section">
+                <h3 class="menu-title">Doctor Connectivity</h3>
+                <div class="menu-list">
+                    <button class="menu-item highlight">
+                        <div class="menu-icon doctor">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Find a Gynecologist</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">My Appointments</span>
+                        <span class="menu-badge new">1 upcoming</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7" />
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Video Consultation</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Chat with Doctor</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Preferences -->
+            <section class="menu-section">
+                <h3 class="menu-title">Preferences</h3>
+                <div class="menu-list">
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Notifications</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Privacy & Security</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5" />
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Appearance</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="menu-item">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4" />
+                                <path d="M12 8h.01" />
+                            </svg>
+                        </div>
+                        <span class="menu-label">Help & Support</span>
+                        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Logout -->
+            <button class="logout-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    <polyline points="16 17 21 12 16 7" />
+                    <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+                Log Out
+            </button>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Diet Plan Screen -->
+    <template id="diet-screen-template">
+        <div class="screen diet-screen">
+            <header class="screen-header with-back">
+                <button class="back-btn" onclick="loadScreen('home')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 class="screen-title">Diet Plan</h1>
+                <button class="header-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="21" x2="4" y2="14" />
+                        <line x1="4" y1="10" x2="4" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="12" />
+                        <line x1="12" y1="8" x2="12" y2="3" />
+                        <line x1="20" y1="21" x2="20" y2="16" />
+                        <line x1="20" y1="12" x2="20" y2="3" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Cycle Phase Diet Banner -->
+            <section class="phase-diet-banner">
+                <div class="phase-indicator">
+                    <span class="phase-dot ovulation"></span>
+                    <span class="phase-name">Ovulation Phase</span>
+                </div>
+                <h3 class="banner-title">Focus on Cooling Foods</h3>
+                <p class="banner-desc">Your body temperature is higher. Include cucumbers, coconut water, and leafy
+                    greens.</p>
+            </section>
+
+            <!-- Diet Type Filter -->
+            <div class="diet-filter">
+                <button class="filter-chip active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="pcos">PCOS</button>
+                <button class="filter-chip" data-filter="fertility">Fertility</button>
+                <button class="filter-chip" data-filter="weight">Weight Loss</button>
+                <button class="filter-chip" data-filter="energy">Energy Boost</button>
+            </div>
+
+            <!-- Today's Meal Plan -->
+            <section class="meal-plan-section">
+                <h3 class="section-title">Today's Meal Plan</h3>
+                <div class="meal-cards">
+                    <div class="meal-card breakfast">
+                        <div class="meal-time">
+                            <span class="time-icon">🌅</span>
+                            <span class="time-label">Breakfast</span>
+                            <span class="time-value">8:00 AM</span>
+                        </div>
+                        <div class="meal-details">
+                            <h4 class="meal-name">Ragi Idli with Sambar</h4>
+                            <p class="meal-benefits">High iron, fiber-rich, PCOS-friendly</p>
+                            <div class="meal-tags">
+                                <span class="tag veg">Veg</span>
+                                <span class="tag calories">280 kcal</span>
+                            </div>
+                        </div>
+                        <button class="swap-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9" />
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                <polyline points="7 23 3 19 7 15" />
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="meal-card lunch">
+                        <div class="meal-time">
+                            <span class="time-icon">☀️</span>
+                            <span class="time-label">Lunch</span>
+                            <span class="time-value">1:00 PM</span>
+                        </div>
+                        <div class="meal-details">
+                            <h4 class="meal-name">Palak Paneer + Brown Rice</h4>
+                            <p class="meal-benefits">Iron-rich, protein, complex carbs</p>
+                            <div class="meal-tags">
+                                <span class="tag veg">Veg</span>
+                                <span class="tag calories">420 kcal</span>
+                            </div>
+                        </div>
+                        <button class="swap-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9" />
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                <polyline points="7 23 3 19 7 15" />
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="meal-card snack">
+                        <div class="meal-time">
+                            <span class="time-icon">🍵</span>
+                            <span class="time-label">Snack</span>
+                            <span class="time-value">4:30 PM</span>
+                        </div>
+                        <div class="meal-details">
+                            <h4 class="meal-name">Chana Chaat + Green Tea</h4>
+                            <p class="meal-benefits">Protein boost, antioxidants</p>
+                            <div class="meal-tags">
+                                <span class="tag veg">Veg</span>
+                                <span class="tag calories">150 kcal</span>
+                            </div>
+                        </div>
+                        <button class="swap-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9" />
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                <polyline points="7 23 3 19 7 15" />
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="meal-card dinner">
+                        <div class="meal-time">
+                            <span class="time-icon">🌙</span>
+                            <span class="time-label">Dinner</span>
+                            <span class="time-value">7:30 PM</span>
+                        </div>
+                        <div class="meal-details">
+                            <h4 class="meal-name">Dal Khichdi + Raita</h4>
+                            <p class="meal-benefits">Easy to digest, balanced nutrition</p>
+                            <div class="meal-tags">
+                                <span class="tag veg">Veg</span>
+                                <span class="tag calories">350 kcal</span>
+                            </div>
+                        </div>
+                        <button class="swap-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9" />
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                <polyline points="7 23 3 19 7 15" />
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Superfoods for Cycle -->
+            <section class="superfoods-section">
+                <h3 class="section-title">Superfoods for Your Phase</h3>
+                <div class="superfoods-scroll">
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🥬</div>
+                        <span class="superfood-name">Spinach</span>
+                        <span class="superfood-benefit">Iron</span>
+                    </div>
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🥜</div>
+                        <span class="superfood-name">Flax Seeds</span>
+                        <span class="superfood-benefit">Omega-3</span>
+                    </div>
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🥛</div>
+                        <span class="superfood-name">Curd</span>
+                        <span class="superfood-benefit">Probiotics</span>
+                    </div>
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🌰</div>
+                        <span class="superfood-name">Almonds</span>
+                        <span class="superfood-benefit">Vitamin E</span>
+                    </div>
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🍌</div>
+                        <span class="superfood-name">Banana</span>
+                        <span class="superfood-benefit">Potassium</span>
+                    </div>
+                    <div class="superfood-card">
+                        <div class="superfood-icon">🫚</div>
+                        <span class="superfood-name">Ginger</span>
+                        <span class="superfood-benefit">Anti-inflam</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Foods to Avoid -->
+            <section class="avoid-section">
+                <h3 class="section-title">Avoid During This Phase</h3>
+                <div class="avoid-list">
+                    <div class="avoid-item">
+                        <span class="avoid-icon">☕</span>
+                        <span class="avoid-name">Excess Caffeine</span>
+                    </div>
+                    <div class="avoid-item">
+                        <span class="avoid-icon">🍟</span>
+                        <span class="avoid-name">Fried Foods</span>
+                    </div>
+                    <div class="avoid-item">
+                        <span class="avoid-icon">🧁</span>
+                        <span class="avoid-name">Refined Sugar</span>
+                    </div>
+                    <div class="avoid-item">
+                        <span class="avoid-icon">🥤</span>
+                        <span class="avoid-name">Cold Drinks</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Water Tracker -->
+            <section class="water-tracker-section">
+                <h3 class="section-title">Hydration Goal</h3>
+                <div class="water-tracker">
+                    <div class="water-progress">
+                        <div class="water-fill" style="height: 62%"></div>
+                    </div>
+                    <div class="water-info">
+                        <span class="water-current">5</span>
+                        <span class="water-goal">/ 8 glasses</span>
+                        <button class="btn btn-primary btn-sm add-water-btn">+ Add Glass</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Ayurveda Screen -->
+    <template id="ayurveda-screen-template">
+        <div class="screen ayurveda-screen">
+            <header class="screen-header with-back">
+                <button class="back-btn" onclick="loadScreen('home')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 class="screen-title">Ayurveda</h1>
+                <button class="header-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Dosha Card -->
+            <section class="dosha-card">
+                <div class="dosha-header">
+                    <h3 class="dosha-title">Your Dosha Profile</h3>
+                    <button class="btn btn-text retake-btn">Retake Quiz</button>
+                </div>
+                <div class="dosha-result">
+                    <div class="dosha-main">
+                        <div class="dosha-icon pitta">🔥</div>
+                        <span class="dosha-name">Pitta-Vata</span>
+                    </div>
+                    <div class="dosha-breakdown">
+                        <div class="dosha-bar">
+                            <span class="dosha-label">Vata</span>
+                            <div class="bar-track">
+                                <div class="bar-fill vata" style="width: 30%"></div>
+                            </div>
+                            <span class="dosha-percent">30%</span>
+                        </div>
+                        <div class="dosha-bar">
+                            <span class="dosha-label">Pitta</span>
+                            <div class="bar-track">
+                                <div class="bar-fill pitta" style="width: 50%"></div>
+                            </div>
+                            <span class="dosha-percent">50%</span>
+                        </div>
+                        <div class="dosha-bar">
+                            <span class="dosha-label">Kapha</span>
+                            <div class="bar-track">
+                                <div class="bar-fill kapha" style="width: 20%"></div>
+                            </div>
+                            <span class="dosha-percent">20%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cycle Phase Ayurveda Tips -->
+            <section class="phase-tips-section">
+                <h3 class="section-title">For Your Ovulation Phase</h3>
+                <div class="phase-tip-card">
+                    <div class="tip-icon">☯️</div>
+                    <div class="tip-content">
+                        <h4 class="tip-title">Balance Pitta Energy</h4>
+                        <p class="tip-text">During ovulation, Pitta dosha is naturally elevated. Focus on cooling foods
+                            and avoid spicy meals to maintain balance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Rituals -->
+            <section class="rituals-section">
+                <h3 class="section-title">Daily Dinacharya</h3>
+                <div class="rituals-list">
+                    <div class="ritual-card completed">
+                        <div class="ritual-time">6:00 AM</div>
+                        <div class="ritual-info">
+                            <h4 class="ritual-name">Warm Water + Honey</h4>
+                            <p class="ritual-desc">Start your day with warm water and a teaspoon of honey</p>
+                        </div>
+                        <div class="ritual-check">✓</div>
+                    </div>
+                    <div class="ritual-card">
+                        <div class="ritual-time">6:30 AM</div>
+                        <div class="ritual-info">
+                            <h4 class="ritual-name">Abhyanga (Self-Massage)</h4>
+                            <p class="ritual-desc">Use warm coconut oil for a 10-minute self-massage</p>
+                        </div>
+                        <div class="ritual-check empty"></div>
+                    </div>
+                    <div class="ritual-card">
+                        <div class="ritual-time">7:00 AM</div>
+                        <div class="ritual-info">
+                            <h4 class="ritual-name">Pranayama</h4>
+                            <p class="ritual-desc">Practice Sheetali (cooling breath) for 5 minutes</p>
+                        </div>
+                        <div class="ritual-check empty"></div>
+                    </div>
+                    <div class="ritual-card">
+                        <div class="ritual-time">9:00 PM</div>
+                        <div class="ritual-info">
+                            <h4 class="ritual-name">Golden Milk</h4>
+                            <p class="ritual-desc">Warm turmeric milk before bed for better sleep</p>
+                        </div>
+                        <div class="ritual-check empty"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Herbal Recommendations -->
+            <section class="herbs-section">
+                <h3 class="section-title">Herbal Allies</h3>
+                <div class="herbs-scroll">
+                    <div class="herb-card">
+                        <div class="herb-image">🌿</div>
+                        <h4 class="herb-name">Shatavari</h4>
+                        <p class="herb-benefit">Hormonal balance</p>
+                        <span class="herb-usage">1 tsp with milk</span>
+                    </div>
+                    <div class="herb-card">
+                        <div class="herb-image">🌱</div>
+                        <h4 class="herb-name">Ashwagandha</h4>
+                        <p class="herb-benefit">Stress relief</p>
+                        <span class="herb-usage">500mg daily</span>
+                    </div>
+                    <div class="herb-card">
+                        <div class="herb-image">🍃</div>
+                        <h4 class="herb-name">Brahmi</h4>
+                        <p class="herb-benefit">Mental clarity</p>
+                        <span class="herb-usage">1 tsp as tea</span>
+                    </div>
+                    <div class="herb-card">
+                        <div class="herb-image">🌸</div>
+                        <h4 class="herb-name">Lodhra</h4>
+                        <p class="herb-benefit">Menstrual health</p>
+                        <span class="herb-usage">With honey</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Yoga Recommendations -->
+            <section class="yoga-section">
+                <div class="section-header">
+                    <h3 class="section-title">Yoga for This Phase</h3>
+                    <button class="see-all-btn">See All</button>
+                </div>
+                <div class="yoga-card">
+                    <div class="yoga-thumbnail">
+                        <svg viewBox="0 0 100 60" fill="none">
+                            <rect width="100" height="60" rx="8" fill="#F5E6D3" />
+                            <circle cx="50" cy="25" r="8" fill="#B8A9C9" />
+                            <ellipse cx="50" cy="45" rx="15" ry="8" fill="#B8A9C9" />
+                        </svg>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="yoga-info">
+                        <h4 class="yoga-name">Moon Salutation</h4>
+                        <p class="yoga-duration">15 min • Cooling • Pitta balancing</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Home Remedies Screen -->
+    <template id="remedies-screen-template">
+        <div class="screen remedies-screen">
+            <header class="screen-header with-back">
+                <button class="back-btn" onclick="loadScreen('home')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 class="screen-title">Home Remedies</h1>
+                <button class="header-icon-btn search-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Symptom Categories -->
+            <section class="symptom-categories">
+                <h3 class="section-title">What's bothering you?</h3>
+                <div class="category-grid">
+                    <button class="category-card active" data-symptom="cramps">
+                        <div class="category-icon">😣</div>
+                        <span class="category-name">Cramps</span>
+                    </button>
+                    <button class="category-card" data-symptom="bloating">
+                        <div class="category-icon">🫄</div>
+                        <span class="category-name">Bloating</span>
+                    </button>
+                    <button class="category-card" data-symptom="headache">
+                        <div class="category-icon">🤕</div>
+                        <span class="category-name">Headache</span>
+                    </button>
+                    <button class="category-card" data-symptom="fatigue">
+                        <div class="category-icon">😴</div>
+                        <span class="category-name">Fatigue</span>
+                    </button>
+                    <button class="category-card" data-symptom="acne">
+                        <div class="category-icon">😰</div>
+                        <span class="category-name">Acne</span>
+                    </button>
+                    <button class="category-card" data-symptom="mood">
+                        <div class="category-icon">😔</div>
+                        <span class="category-name">Mood Swings</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Remedies List -->
+            <section class="remedies-section">
+                <h3 class="section-title">Remedies for Cramps</h3>
+                <div class="remedy-cards">
+                    <div class="remedy-card">
+                        <div class="remedy-header">
+                            <div class="remedy-icon">🫚</div>
+                            <div class="remedy-rating">
+                                <span>⭐</span>
+                                <span class="rating-value">4.8</span>
+                                <span class="rating-count">(234)</span>
+                            </div>
+                        </div>
+                        <h4 class="remedy-title">Ginger + Jaggery Tea</h4>
+                        <p class="remedy-desc">Boil fresh ginger with jaggery for a soothing pain-relief tea</p>
+                        <div class="remedy-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Prep Time</span>
+                                <span class="detail-value">10 mins</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Effectiveness</span>
+                                <span class="detail-value">High</span>
+                            </div>
+                        </div>
+                        <div class="remedy-ingredients">
+                            <span class="ingredient">Ginger (1 inch)</span>
+                            <span class="ingredient">Jaggery (1 tbsp)</span>
+                            <span class="ingredient">Water (1 cup)</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">View Recipe</button>
+                    </div>
+
+                    <div class="remedy-card">
+                        <div class="remedy-header">
+                            <div class="remedy-icon">🌰</div>
+                            <div class="remedy-rating">
+                                <span>⭐</span>
+                                <span class="rating-value">4.6</span>
+                                <span class="rating-count">(189)</span>
+                            </div>
+                        </div>
+                        <h4 class="remedy-title">Ajwain (Carom Seeds) Heat Pack</h4>
+                        <p class="remedy-desc">Roast ajwain in a cloth and use as a warm compress</p>
+                        <div class="remedy-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Prep Time</span>
+                                <span class="detail-value">5 mins</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Effectiveness</span>
+                                <span class="detail-value">Very High</span>
+                            </div>
+                        </div>
+                        <div class="remedy-ingredients">
+                            <span class="ingredient">Ajwain (2 tbsp)</span>
+                            <span class="ingredient">Cotton cloth</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">View Recipe</button>
+                    </div>
+
+                    <div class="remedy-card">
+                        <div class="remedy-header">
+                            <div class="remedy-icon">🥛</div>
+                            <div class="remedy-rating">
+                                <span>⭐</span>
+                                <span class="rating-value">4.5</span>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                        </div>
+                        <h4 class="remedy-title">Haldi Doodh (Turmeric Milk)</h4>
+                        <p class="remedy-desc">Warm milk with turmeric reduces inflammation and pain</p>
+                        <div class="remedy-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Prep Time</span>
+                                <span class="detail-value">8 mins</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Effectiveness</span>
+                                <span class="detail-value">High</span>
+                            </div>
+                        </div>
+                        <div class="remedy-ingredients">
+                            <span class="ingredient">Turmeric (1/2 tsp)</span>
+                            <span class="ingredient">Milk (1 cup)</span>
+                            <span class="ingredient">Honey (optional)</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">View Recipe</button>
+                    </div>
+
+                    <div class="remedy-card">
+                        <div class="remedy-header">
+                            <div class="remedy-icon">🌿</div>
+                            <div class="remedy-rating">
+                                <span>⭐</span>
+                                <span class="rating-value">4.7</span>
+                                <span class="rating-count">(201)</span>
+                            </div>
+                        </div>
+                        <h4 class="remedy-title">Methi (Fenugreek) Water</h4>
+                        <p class="remedy-desc">Soak methi seeds overnight and drink the water in morning</p>
+                        <div class="remedy-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Prep Time</span>
+                                <span class="detail-value">Overnight</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Effectiveness</span>
+                                <span class="detail-value">High</span>
+                            </div>
+                        </div>
+                        <div class="remedy-ingredients">
+                            <span class="ingredient">Methi seeds (1 tsp)</span>
+                            <span class="ingredient">Water (1 glass)</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">View Recipe</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Relief Tips -->
+            <section class="quick-relief-section">
+                <h3 class="section-title">Quick Relief Tips</h3>
+                <div class="relief-tips">
+                    <div class="relief-tip">
+                        <span class="tip-icon">🧘</span>
+                        <span class="tip-text">Try child's pose or cat-cow stretch</span>
+                    </div>
+                    <div class="relief-tip">
+                        <span class="tip-icon">🔥</span>
+                        <span class="tip-text">Apply hot water bottle to lower abdomen</span>
+                    </div>
+                    <div class="relief-tip">
+                        <span class="tip-icon">💆</span>
+                        <span class="tip-text">Massage lower back with sesame oil</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Find Doctor Screen -->
+    <template id="doctor-screen-template">
+        <div class="screen doctor-screen">
+            <header class="screen-header with-back">
+                <button class="back-btn" onclick="loadScreen('home')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 class="screen-title">Find Doctor</h1>
+                <button class="header-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Search Bar -->
+            <div class="search-section">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search doctors, specializations...">
+                </div>
+                <div class="location-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Mumbai, Maharashtra</span>
+                    <button class="change-btn">Change</button>
+                </div>
+            </div>
+
+            <!-- Specialization Filter -->
+            <div class="specialization-filter">
+                <button class="spec-chip active" data-spec="gynecologist">Gynecologist</button>
+                <button class="spec-chip" data-spec="obstetrician">Obstetrician</button>
+                <button class="spec-chip" data-spec="fertility">Fertility</button>
+                <button class="spec-chip" data-spec="endocrinologist">Endocrinologist</button>
+            </div>
+
+            <!-- Quick Book Section -->
+            <section class="quick-book-section">
+                <div class="section-header">
+                    <h3 class="section-title">Video Consultation</h3>
+                    <span class="available-badge">Available Now</span>
+                </div>
+                <div class="quick-book-card">
+                    <div class="book-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                        </svg>
+                    </div>
+                    <div class="book-info">
+                        <h4>Instant Video Call</h4>
+                        <p>Connect with a gynecologist in under 5 mins</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm">₹299</button>
+                </div>
+            </section>
+
+            <!-- Doctor List -->
+            <section class="doctors-section">
+                <h3 class="section-title">Top Gynecologists Near You</h3>
+                <div class="doctor-cards">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Meera+Ag&background=B8A9C9&color=fff"
+                                alt="Dr. Meera Ag">
+                            <span class="verified-badge">✓</span>
+                        </div>
+                        <div class="doctor-info">
+                            <h4 class="doctor-name">Dr. Meera Ag</h4>
+                            <p class="doctor-specialty">Gynecologist & Obstetrician</p>
+                            <p class="doctor-experience">15 years experience</p>
+                            <div class="doctor-meta">
+                                <span class="rating">⭐ 4.9 (234 reviews)</span>
+                                <span class="consult-fee">₹500</span>
+                            </div>
+                            <div class="doctor-tags">
+                                <span class="tag">PCOS Expert</span>
+                                <span class="tag">High Risk Pregnancy</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Book Now</button>
+                        </div>
+                        <div class="availability-info">
+                            <span class="next-slot">Next available: Today, 4:00 PM</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Priya+Patel&background=A8D5D8&color=fff"
+                                alt="Dr. Priya Patel">
+                            <span class="verified-badge">✓</span>
+                        </div>
+                        <div class="doctor-info">
+                            <h4 class="doctor-name">Dr. Priya Patel</h4>
+                            <p class="doctor-specialty">Reproductive Endocrinologist</p>
+                            <p class="doctor-experience">12 years experience</p>
+                            <div class="doctor-meta">
+                                <span class="rating">⭐ 4.8 (189 reviews)</span>
+                                <span class="consult-fee">₹600</span>
+                            </div>
+                            <div class="doctor-tags">
+                                <span class="tag">Infertility</span>
+                                <span class="tag">IVF Specialist</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Book Now</button>
+                        </div>
+                        <div class="availability-info">
+                            <span class="next-slot">Next available: Tomorrow, 10:00 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Anjali+Desai&background=E8B4B8&color=fff"
+                                alt="Dr. Anjali Desai">
+                            <span class="verified-badge">✓</span>
+                        </div>
+                        <div class="doctor-info">
+                            <h4 class="doctor-name">Dr. Anjali Desai</h4>
+                            <p class="doctor-specialty">Gynecologist</p>
+                            <p class="doctor-experience">20 years experience</p>
+                            <div class="doctor-meta">
+                                <span class="rating">⭐ 4.9 (312 reviews)</span>
+                                <span class="consult-fee">₹450</span>
+                            </div>
+                            <div class="doctor-tags">
+                                <span class="tag">Menopause</span>
+                                <span class="tag">Hormonal Issues</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Book Now</button>
+                        </div>
+                        <div class="availability-info">
+                            <span class="next-slot">Next available: Today, 6:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <!-- Calendar Screen -->
+    <template id="calendar-screen-template">
+        <div class="screen calendar-screen">
+            <header class="screen-header with-back">
+                <button class="back-btn" onclick="loadScreen('home')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 class="screen-title">Calendar</h1>
+                <button class="header-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Month Navigator -->
+            <div class="month-navigator">
+                <button class="month-nav-btn prev">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <h2 class="current-month">December 2024</h2>
+                <button class="month-nav-btn next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Cycle Legend -->
+            <div class="cycle-legend">
+                <div class="legend-item">
+                    <span class="legend-dot period"></span>
+                    <span>Period</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot fertile"></span>
+                    <span>Fertile</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot ovulation"></span>
+                    <span>Ovulation</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot predicted"></span>
+                    <span>Predicted</span>
+                </div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <div class="calendar-grid">
+                    <!-- Week 1 -->
+                    <div class="calendar-day other-month">24</div>
+                    <div class="calendar-day other-month">25</div>
+                    <div class="calendar-day other-month period-end">26</div>
+                    <div class="calendar-day other-month">27</div>
+                    <div class="calendar-day other-month">28</div>
+                    <div class="calendar-day other-month">29</div>
+                    <div class="calendar-day other-month">30</div>
+                    <!-- Week 2 -->
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <!-- Week 3 -->
+                    <div class="calendar-day fertile">8</div>
+                    <div class="calendar-day fertile">9</div>
+                    <div class="calendar-day fertile">10</div>
+                    <div class="calendar-day today ovulation">11</div>
+                    <div class="calendar-day fertile">12</div>
+                    <div class="calendar-day fertile">13</div>
+                    <div class="calendar-day fertile">14</div>
+                    <!-- Week 4 -->
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <!-- Week 5 -->
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day predicted period">24</div>
+                    <div class="calendar-day predicted period">25</div>
+                    <div class="calendar-day predicted period">26</div>
+                    <div class="calendar-day predicted period">27</div>
+                    <div class="calendar-day predicted period">28</div>
+                    <!-- Week 6 -->
+                    <div class="calendar-day predicted period">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day">31</div>
+                    <div class="calendar-day other-month">1</div>
+                    <div class="calendar-day other-month">2</div>
+                    <div class="calendar-day other-month">3</div>
+                    <div class="calendar-day other-month">4</div>
+                </div>
+            </div>
+
+            <!-- Selected Day Info -->
+            <section class="day-info-section">
+                <div class="day-info-header">
+                    <h3 class="day-date">December 11, 2024</h3>
+                    <span class="day-phase ovulation">Ovulation Day</span>
+                </div>
+                <div class="day-logs">
+                    <h4 class="logs-title">Today's Logs</h4>
+                    <div class="log-items">
+                        <div class="log-item">
+                            <span class="log-icon">😊</span>
+                            <span class="log-label">Mood: Happy</span>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-icon">💧</span>
+                            <span class="log-label">Water: 5 glasses</span>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-icon">😴</span>
+                            <span class="log-label">Sleep: 7h 30m</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary add-log-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Add Log
+                    </button>
+                </div>
+            </section>
+
+            <!-- Predictions -->
+            <section class="predictions-section">
+                <h3 class="section-title">Upcoming</h3>
+                <div class="prediction-cards">
+                    <div class="prediction-card period">
+                        <div class="prediction-icon">🌸</div>
+                        <div class="prediction-info">
+                            <span class="prediction-label">Next Period</span>
+                            <span class="prediction-date">Dec 24 - Dec 28</span>
+                        </div>
+                        <span class="prediction-countdown">13 days</span>
+                    </div>
+                    <div class="prediction-card fertile">
+                        <div class="prediction-icon">✨</div>
+                        <div class="prediction-info">
+                            <span class="prediction-label">Next Fertile Window</span>
+                            <span class="prediction-date">Jan 5 - Jan 11</span>
+                        </div>
+                        <span class="prediction-countdown">25 days</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </template>
+
+    <script src="js/app.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>
